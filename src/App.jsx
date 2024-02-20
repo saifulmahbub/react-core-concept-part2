@@ -1,4 +1,5 @@
 import "./App.css";
+import Counter from "./Counter";
 
 function App() {
   function handleClick() {
@@ -13,6 +14,7 @@ function App() {
   return (
     <>
       <h1>React Core Concept-2</h1>
+      <Counter></Counter>
       <button onClick={handleClick}>Click Me</button>
       <button onClick={handleClick2}>Clicked Me 2</button>
       <button
@@ -22,7 +24,8 @@ function App() {
       >
         Click me again
       </button>
-      <button></button>
+      {/* a bit confusing ,but it solves the problem of calling function befor clciking  */}
+      <button onClick={() => handleClick4(10)}>Button 4</button>
     </>
   );
 }
